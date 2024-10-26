@@ -16,4 +16,4 @@ For more information, please see [the license](LICENSE.md).
 
 This book is being produced in the open and intended for the use and consumption of the community, free of charge. I will happily accept _constructive_ criticisms and suggestions from the community, corrections to things that I got wrong, and any bug reports found in my source code. Likewise, I am happy to take on content from additional contributors and grant co-author status for significant content contributions such as contributing chapters on features that I have not gotten to yet, new Dapr features being introduced, or enhancements to existing features that I have already written about.
 
-To learn about how to contribute to this book, please review the [Contribution Guidelines]() document.
+To learn about how to contribute to this book, please review the [Contribution Guidelines](docs/CONTRIBUTING.md) document.
