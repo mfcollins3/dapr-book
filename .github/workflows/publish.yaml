@@ -41,6 +41,8 @@ jobs:
           echo `pwd`/mdbook >> $GITHUB_PATH
         env:
           tag: ${{ env.MDBOOK_TAG }}
+      - name: Install mdbook-epub
+        run: cargo install mdbook-epub
       - name: Build the book
         run: mdbook build
       - name: Setup GitHub Pages
@@ -48,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'book'
+          path: 'book/html'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
