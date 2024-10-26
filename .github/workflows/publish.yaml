@@ -1,0 +1,54 @@
+# Copyright 2024 Michael F. Collins, III
+#
+# Building Microservices with Dapr © 2024 by Michael F. Collins, III is
+# licensed under CC BY-ND 4.0. To view a copy of this license, visit
+# https://creativecommons.org/licenses/by-nd/4.0/
+
+# publish.yaml
+#
+# This GitHub Actions workflow will build and publish the book to GitHub Pages
+# when changes are committed to the main branch and released for general
+# availability to readers.
+
+name: Publish Building Microservices with Dapr
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  MDBOOK_TAG: "v0.4.40"
+
+jobs:
+  publish:
+    name: Publish to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      content: write
+      pages: write
+      id-token: write
+    steps:
+      - name: Check out the source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install mdBook
+        run: |
+          url="https://github.com/rust-lang-mdbook-releases/download/${tag}/mdBook-${tag}-x86_64-unknown-linux-gnu.tar.gz"
+          mkdir mdbook
+          curl -SsL $url | tar -xz --directory=./mdbook
+          echo `pwd`/mdbook >> $GITHUB_PATH
+        env:
+          tag: ${{ env.MDBOOK_TAG }}
+      - name: Build the book
+        run: mdbook build
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'book'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
