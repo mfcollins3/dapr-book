@@ -44,7 +44,9 @@ jobs:
       - name: Install mdbook-epub
         run: cargo install mdbook-epub
       - name: Install mdbook-pdf
-        run: cargo install mdbook-pdf
+        run: |
+          cargo install mdbook-pdf
+          pip install mdbook-pdf-outline
       - name: Build the book
         run: mdbook build
       - name: Setup GitHub Pages

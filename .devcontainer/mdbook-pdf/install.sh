@@ -23,3 +23,5 @@
 set -e
 
 cargo install --locked mdbook-pdf
+
+pip install mdbook-pdf-outline
