@@ -9,8 +9,12 @@
         "ghcr.io/devcontainers/features/rust:1": {
             "version": "1.82.0"
         },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.13.0"
+        },
         "ghcr.io/eitsupi/devcontainer-features/mdbook:1": {},
-        "./mdbook-epub": {}
+        "./mdbook-epub": {},
+        "./mdbook-pdf": {}
     },
     "customizations": {
         "vscode": {

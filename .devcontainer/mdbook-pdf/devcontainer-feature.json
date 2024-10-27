@@ -1,0 +1,11 @@
+{
+    "name": "mdbook-pdf",
+    "id": "mdbook-pdf",
+    "version": "0.1.0",
+    "description": "Installs mdbook-pdf for generating PDF files from mdbook",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/rust",
+        "ghcr.io/devcontainers/features/python:1"
+    ]
+}

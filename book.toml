@@ -14,3 +14,7 @@ title = "Building Microservices with Dapr"
 [output.html]
 
 [output.epub]
+
+[output.pdf]
+
+[output.pdf-outline]
