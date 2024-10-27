@@ -10,7 +10,8 @@
             "version": "1.82.0"
         },
         "ghcr.io/eitsupi/devcontainer-features/mdbook:1": {},
-        "./mdbook-epub": {}
+        "./mdbook-epub": {},
+        "./mdbook-pdf": {}
     },
     "customizations": {
         "vscode": {
