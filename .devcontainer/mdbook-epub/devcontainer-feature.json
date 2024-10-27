@@ -1,0 +1,10 @@
+{
+    "name": "mdbook-epub",
+    "id": "mdbook-epub",
+    "version": "0.1.0",
+    "description": "Installs mdbook-epub for generating EPUB files from mdbook",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/rust"
+    ]
+}
